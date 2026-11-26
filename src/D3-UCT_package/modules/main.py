@@ -2,13 +2,13 @@ import pygame
 import platform
 import random
 import json
-import base64
 import os
-import codecs
 import math
 from pathlib import Path
 from pygame.locals import *
+
 import setting
+import crypto
 
 class game_variable:
     def __init__(self):
