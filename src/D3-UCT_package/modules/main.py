@@ -9,6 +9,7 @@ from pygame.locals import *
 
 import setting
 import crypto
+from scenes import index
 
 class game_variable:
     def __init__(self):
@@ -39,9 +40,11 @@ class pygame_function:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 GV._running = False
+        index.GBH.game_option_buttons_hover()
 
     def on_render(self):
         GV.display.fill(setting.table_colour)
+        index.GB.game_option_buttons(GV.display)
         pygame.display.flip()
 
     def on_cleanup(self):
