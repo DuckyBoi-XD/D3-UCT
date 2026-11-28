@@ -40,11 +40,11 @@ class pygame_function:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 GV._running = False
-        index.GBH.game_option_buttons_hover()
+        index.game_option_buttons_hover()
 
     def on_render(self):
         GV.display.fill(setting.table_colour)
-        index.GB.game_option_buttons(GV.display)
+        index.game_option_buttons(GV.display)
         pygame.display.flip()
 
     def on_cleanup(self):
